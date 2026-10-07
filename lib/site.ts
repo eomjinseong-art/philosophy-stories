@@ -17,6 +17,7 @@ export const sisters = [
   { href: "https://nadoo-myth.vercel.app", label: "나두신화", en: "Myth" },
   { href: "https://greece-stories.vercel.app", label: "그리스이야기", en: "Greece Stories" },
   { href: "https://rome-stories.vercel.app", label: "로마이야기", en: "Rome Stories" },
+  { href: "https://nadoo-timeline.vercel.app", label: "나두연표", en: "Timeline" },
 ] as const;
 
 export const nav = [
