@@ -37,7 +37,7 @@ export default function HomePage() {
         </p>
         <p className="mt-3 text-xs text-terra">{site.brand}</p>
         <p className="mx-auto mt-4 max-w-xl text-xs leading-6 text-muted">
-          이번 명단은 서양 {westCount}명, 동양 {eastCount}명입니다. 전체 철학사가 아니라, 처음 길을 잡는 짧은 목록입니다.
+          이번 명단은 서양 {westCount}명, 동양 {eastCount}명입니다. 전체 철학사가 아니라, 길을 잡기 위해 고른 목록입니다.
         </p>
         <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm">
           <Link href="/people" className="rounded-full bg-terra px-4 py-2 text-white hover:bg-terra-deep">
@@ -56,17 +56,17 @@ export default function HomePage() {
           <Link href="/people?side=west" className="rounded-lg border border-line bg-card p-5 hover:border-terra">
             <p className="text-[11px] tracking-[0.16em] text-terra">WEST</p>
             <h3 className="mt-1 font-serif text-2xl text-ink">서양</h3>
-            <p className="mt-1 text-xs text-muted">{westCount}명 · 고대 아테네에서 20세기 파리까지</p>
+            <p className="mt-1 text-xs text-muted">{westCount}명 · 소크라테스 이전에서 20세기까지</p>
             <p className="mt-3 text-sm leading-6 text-muted">
-              소크라테스, 플라톤, 아리스토텔레스, 스토아 세 사람, 데카르트, 칸트, 니체. 아우구스티누스와 아퀴나스는 얇게, 카뮈와 보부아르는 문장을 인용하지 않고 뜻만 적습니다.
+              헤라클레이토스와 파르메니데스에서 아리스토텔레스로, 스피노자와 칸트를 지나 헤겔, 밀, 마르크스, 비트겐슈타인, 롤스까지. 이븐 루시드는 그리스 철학이 아랍어를 거쳐 라틴으로 이어지는 다리로 서양 필터에 두었습니다. 저작권이 남은 20세기 글은 문장을 인용하지 않고 뜻만 적습니다.
             </p>
           </Link>
           <Link href="/people?side=east" className="rounded-lg border border-line bg-card p-5 hover:border-terra">
             <p className="text-[11px] tracking-[0.16em] text-terra">EAST</p>
             <h3 className="mt-1 font-serif text-2xl text-ink">동양</h3>
-            <p className="mt-1 text-xs text-muted">{eastCount}명 · 중국 고전, 인도, 신라와 조선</p>
+            <p className="mt-1 text-xs text-muted">{eastCount}명 · 중국 고전, 인도, 한국과 일본</p>
             <p className="mt-3 text-sm leading-6 text-muted">
-              공자, 맹자, 노자, 장자, 붓다의 철학 전통. 원효와 퇴계는 얇게, 신앙을 권하지 않고 생각의 뼈대만 적습니다.
+              공자, 노자, 붓다에서 주희, 도겐, 다산, 니시다까지. 이름은 예시이고 목록 전체가 아닙니다. 원효와 퇴계, 다산은 얇게, 신앙을 권하지 않고 생각의 뼈대만 적습니다.
             </p>
           </Link>
         </div>
