@@ -27,6 +27,7 @@ export const westMore: Person[] = [
       { ko: "같은 강으로 들어가는 사람들에게는 늘 다른 물이 흘러갑니다.", source: "헤라클레이토스 파편 DK 22B12", mode: "번역", note: "플라톤 『크라틸로스』의 ‘두 번은 못 들어간다’는 이 파편을 더 세게 줄인 말입니다." },
       { ko: "내 말이 아니라 로고스에 귀를 기울인 뒤, 모든 것이 하나라고 동의하는 것이 지혜입니다.", source: "헤라클레이토스 파편 DK 22B50", mode: "번역" },
     ],
+    elsewhere: [{ href: "https://greece-stories.vercel.app/map#ionia", label: "그리스이야기 지도의 이오니아" }],
     related: ["parmenides", "plato", "laozi"],
   },
   {
@@ -105,6 +106,7 @@ export const westMore: Person[] = [
     quotes: [
       { ko: "혼자인 자가 혼자인 자에게로 달아나는 일입니다.", source: "플로티노스 『엔네아데스』 6권 9장 11절", mode: "번역", note: "포르피리오스가 엮은 글의 끝 이미지입니다. 은둔 권유가 아니라, 하나와의 합일을 말한 자리입니다." },
     ],
+    elsewhere: [{ href: "https://egypt-stories.vercel.app/map#alexandria", label: "이집트이야기 지도의 알렉산드리아" }],
     related: ["plato", "augustine", "hypatia"],
   },
   {

@@ -3,6 +3,99 @@ import type { Person } from "@/data/types";
 /** 서양 쪽 1차 명단. 문장은 원전 위치를 보고 이 사이트에서 다시 쓴 것이다. */
 export const west: Person[] = [
   {
+    slug: "homer",
+    nameKo: "호메로스",
+    nameEn: "Homer",
+    nativeName: "Ὅμηρος",
+    tradition: "west",
+    era: "before",
+    years: "기원전 8세기 무렵으로 전함",
+    region: "이오니아 전승",
+    school: "서사시",
+    oneLiner: "일리아스와 오디세이아를 지었다고 전해지는 사람입니다. 눈 먼 시인이었다는 말과, 정말 한 사람이 있었는지는 그대로 단정할 수 없습니다.",
+    caution:
+      "전통은 기원전 8세기의 눈 먼 시인으로 전합니다. 그 사람이 실재했는지, 두 시를 한 사람이 썼는지는 고대부터 논쟁입니다. 여기서는 그 논쟁을 숨기지 않고, 시가 그리스 사람에게 무엇이었는지만 적습니다.",
+    ideas: [
+      {
+        title: "한 사람인지 모릅니다",
+        body: "호메로스는 전통적으로 기원전 8세기의 눈 먼 시인입니다. 그러나 그 이름의 시인이 실재했는지, 두 서사시를 한 사람이 지었는지는 학설이 갈립니다. ‘호메로스의 시’는 한 명의 전기라기보다, 오래 구전되다가 적힌 시의 이름에 가깝습니다.",
+      },
+      {
+        title: "일리아스, 51일의 분노",
+        body: "트로이 전쟁은 10년으로 전해집니다. 일리아스는 그 10년째의 51일만 다룹니다. 중심은 아킬레우스의 분노입니다. 목마도, 성의 함락도, 아킬레우스의 죽음도 이 시의 본문 밖입니다.",
+      },
+      {
+        title: "오디세이아, 10년의 귀향",
+        body: "오디세우스가 트로이에서 집으로 돌아가는 데 10년이 걸립니다. 전쟁 10년과 합치면 집을 비운 시간이 20년입니다. 시는 귀향의 막바지에서 시작해, 앞의 모험은 이야기 속의 이야기로 돌아봅니다.",
+      },
+      {
+        title: "철학보다 먼저 배운 가치",
+        body: "그리스 사람은 철학 책보다 먼저 이 시에서 아레테(뛰어남), 명예, 운명, 신들의 변덕을 배웠습니다. 크세노파네스는 호메로스의 신들이 사람처럼 훔치고 속인다고 나무랐습니다. 플라톤은 『국가』에서, 신을 나쁘게 그리는 시인을 교육에서 빼자는 논쟁을 엽니다. 아테네가 시인을 추방했다는 기록이 아니라, 대화 안의 제안입니다.",
+      },
+    ],
+    works: [
+      {
+        title: "『일리아스』",
+        note: "24권. 아킬레우스의 분노로 시작해 헥토르의 장례로 끝납니다. 트로이 전쟁 전체의 연대기가 아닙니다.",
+      },
+      {
+        title: "『오디세이아』",
+        note: "24권. 오디세우스의 귀향과, 집에 남은 텔레마코스와 페넬로페의 이야기입니다. 모험의 목록으로만 읽으면 집의 질서가 빠집니다.",
+      },
+    ],
+    quotes: [
+      {
+        ko: "분노를 노래하소서, 여신이여. 펠레우스의 아들 아킬레우스의 그 파괴적인 분노를.",
+        original: "μῆνιν ἄειδε θεὰ Πηληϊάδεω Ἀχιλῆος οὐλομένην",
+        source: "호메로스 『일리아스』 1권 1–2행",
+        mode: "번역",
+        note: "시의 첫 단어가 분노(메니스)입니다. 전쟁 전체가 아니라 그 분노의 결과가 이 시의 주제입니다.",
+      },
+      {
+        ko: "말해 주소서, 무사여, 그 사람을. 많이 떠돌고 꾀가 많은 사람을.",
+        original: "ἄνδρα μοι ἔννεπε, μοῦσα, πολύτροπον",
+        source: "호메로스 『오디세이아』 1권 1행",
+        mode: "번역",
+        note: "폴리트로폰은 ‘여러 방향으로 돌아다닌’과 ‘꾀가 많은’을 함께 품습니다. 한 단어로 줄이면 한쪽이 빠집니다.",
+      },
+      {
+        ko: "늘 으뜸이 되고, 남보다 뛰어나거라.",
+        original: "αἰὲν ἀριστεύειν καὶ ὑπείροχον ἔμμεναι ἄλλων",
+        source: "호메로스 『일리아스』 6권 208행",
+        mode: "번역",
+        note: "글라우코스가 아버지 히폴로코스의 당부를 전하는 말입니다. 아레테, 곧 남보다 뛰어난 사람이 되라는 교육이 이 한 줄에 있습니다. 11권 784행에서 펠레우스가 아킬레우스에게 한 말로도 반복됩니다.",
+      },
+    ],
+    films: [
+      {
+        titleKo: "트로이",
+        titleEn: "Troy",
+        year: 2004,
+        kind: "영화",
+        blurb:
+          "볼프강 페터젠의 영화입니다. 일리아스가 다루는 51일이 아니라, 전쟁의 시작과 목마와 아킬레우스의 죽음까지 한 편에 넣습니다. 시의 신들은 거의 빠집니다. 영화의 장면과 시의 줄거리를 같은 것으로 보면 안 됩니다.",
+        links: [{ href: "https://greece-stories.vercel.app/movies#troy", label: "그리스이야기 「트로이」" }],
+      },
+      {
+        titleKo: "오디세이",
+        titleEn: "The Odyssey",
+        year: 2026,
+        kind: "영화",
+        blurb:
+          "크리스토퍼 놀란 감독의 2026년 영화입니다. 한국어 제목은 영어 제목 The Odyssey를 옮긴 것이고, 한국 개봉 공식명을 이 페이지에서 확정하지는 않습니다. 오디세우스의 귀향을 다룬 극이지, 시의 본문은 아닙니다.",
+        links: [{ href: "https://greece-stories.vercel.app/movies#odyssey-2026", label: "그리스이야기 「오디세이」" }],
+      },
+    ],
+    elsewhere: [
+      { href: "https://iliad-stories.vercel.app", label: "일리아스 51일 이야기 보러 가기" },
+      { href: "https://greece-stories.vercel.app/people/homer", label: "그리스이야기의 호메로스" },
+      { href: "https://nadoo-myth.vercel.app/stories/trojan-war", label: "나두신화의 트로이 전쟁" },
+      { href: "https://nadoo-myth.vercel.app/stories/odyssey", label: "나두신화의 오디세이아" },
+      { href: "https://nadoo-timeline.vercel.app/events/homeric-epics", label: "나두연표의 호메로스 서사시" },
+    ],
+    related: ["plato", "socrates"],
+  },
+  {
     slug: "socrates",
     nameKo: "소크라테스",
     nameEn: "Socrates",
@@ -80,6 +173,10 @@ export const west: Person[] = [
           "베타니 휴스가 진행한 BBC Four 3부작의 소크라테스 편입니다. 한국어 제목은 영어 제목을 옮긴 것이고, 한국 방송 공식명은 확인하지 못했습니다.",
       },
     ],
+    elsewhere: [
+      { href: "https://greece-stories.vercel.app/people/socrates", label: "그리스이야기의 소크라테스" },
+      { href: "https://nadoo-timeline.vercel.app/events/trial-of-socrates", label: "나두연표의 소크라테스 재판" },
+    ],
     related: ["plato", "aristotle", "confucius"],
   },
   {
@@ -116,7 +213,7 @@ export const west: Person[] = [
     works: [
       {
         title: "『국가』",
-        note: "정의, 동굴, 철인 통치, 시인 추방이 한 대화에 들어 있습니다. 정치 설계도라기보다 영혼의 질서를 나라에 비춘 글에 가깝습니다.",
+        note: "정의, 동굴, 철인 통치, 시인 추방이 한 대화에 들어 있습니다. 시인 추방의 표적은 특히 호메로스입니다. 정치 설계도라기보다 영혼의 질서를 나라에 비춘 글에 가깝습니다.",
       },
       {
         title: "『향연』 『파이돈』 『파이드로스』",
@@ -151,7 +248,11 @@ export const west: Person[] = [
           "플라톤의 전기가 아닙니다. 동굴의 비유처럼, 익숙한 세계가 만들어진 그림자일 수 있다는 상상을 빌린 액션 영화입니다. 빨간 약과 파란 약은 플라톤에 없습니다.",
       },
     ],
-    related: ["socrates", "aristotle", "nietzsche"],
+    elsewhere: [
+      { href: "https://greece-stories.vercel.app/people/plato", label: "그리스이야기의 플라톤" },
+      { href: "https://nadoo-timeline.vercel.app/events/plato-academy", label: "나두연표의 플라톤 아카데메이아" },
+    ],
+    related: ["socrates", "aristotle", "nietzsche", "homer"],
   },
   {
     slug: "aristotle",
@@ -224,7 +325,16 @@ export const west: Person[] = [
         kind: "영화",
         blurb:
           "올리버 스톤의 전기 영화에서 아리스토텔레스는 어린 알렉산드로스의 스승으로 짧게 나옵니다. 전쟁 스펙터클은 그의 윤리학이 아니고, 역사의 세부는 영화입니다.",
+        links: [
+          { href: "https://greece-stories.vercel.app/movies#alexander", label: "그리스이야기 「알렉산더」" },
+          { href: "https://egypt-stories.vercel.app/movies#alexander-2004", label: "이집트이야기 「알렉산더」" },
+          { href: "https://persia-stories.vercel.app/movies#alexander-2004", label: "페르시아이야기 「알렉산더」" },
+        ],
       },
+    ],
+    elsewhere: [
+      { href: "https://greece-stories.vercel.app/people/alexander", label: "그리스이야기의 알렉산드로스" },
+      { href: "https://greece-stories.vercel.app/movies#alexander", label: "그리스이야기 영화 「알렉산더」" },
     ],
     related: ["plato", "aquinas", "confucius"],
   },
@@ -334,6 +444,9 @@ export const west: Person[] = [
         mode: "번역",
       },
     ],
+    elsewhere: [
+      { href: "https://rome-stories.vercel.app/rulers/marcus-aurelius", label: "로마이야기의 마르쿠스 아우렐리우스" },
+    ],
     related: ["seneca", "marcus-aurelius", "socrates"],
   },
   {
@@ -395,6 +508,7 @@ export const west: Person[] = [
         note: "칭찬이 아닙니다. 삶의 반대쪽으로 공부가 샌다는 비판입니다. 순서를 뒤집어 표어로 쓰는 경우가 많습니다.",
       },
     ],
+    elsewhere: [{ href: "https://rome-stories.vercel.app/rulers/nero", label: "로마이야기의 네로" }],
     related: ["epictetus", "marcus-aurelius", "epicurus"],
   },
   {
@@ -459,7 +573,12 @@ export const west: Person[] = [
         kind: "영화",
         blurb:
           "제정 로마의 분위기를 보여 주는 영화입니다. 주인공 막시무스는 실존 인물이 아닙니다. 마르쿠스는 영화처럼 아들에게 살해당한 것이 아니라 180년 전선 근처에서 병으로 죽었습니다.",
+        links: [{ href: "https://rome-stories.vercel.app/movies#gladiator", label: "로마이야기 「글래디에이터」" }],
       },
+    ],
+    elsewhere: [
+      { href: "https://rome-stories.vercel.app/rulers/marcus-aurelius", label: "로마이야기의 마르쿠스 아우렐리우스" },
+      { href: "https://rome-stories.vercel.app/movies#gladiator", label: "로마이야기 영화 「글래디에이터」" },
     ],
     related: ["epictetus", "seneca", "augustine"],
   },
@@ -524,7 +643,12 @@ export const west: Person[] = [
         kind: "영화",
         blurb:
           "알레한드로 아메나바르 감독, 레이첼 와이즈가 히파티아를 맡았습니다. 알렉산드리아의 종교 갈등과 살해를 무대로 하지만, 로맨스와 천문 발견의 세부는 극적 각색입니다. 교과서가 아닙니다.",
+        links: [{ href: "https://greece-stories.vercel.app/movies#agora", label: "그리스이야기 「아고라」" }],
       },
+    ],
+    elsewhere: [
+      { href: "https://egypt-stories.vercel.app/map#alexandria", label: "이집트이야기 지도의 알렉산드리아" },
+      { href: "https://greece-stories.vercel.app/movies#agora", label: "그리스이야기 영화 「아고라」" },
     ],
     related: ["plato", "aristotle", "augustine"],
   },
@@ -584,6 +708,9 @@ export const west: Person[] = [
         source: "아우구스티누스 『고백록』 11권 14장",
         mode: "번역",
       },
+    ],
+    elsewhere: [
+      { href: "https://nadoo-timeline.vercel.app/events/sack-of-rome-410", label: "나두연표의 410년 로마 약탈" },
     ],
     related: ["aquinas", "plato", "hypatia"],
   },

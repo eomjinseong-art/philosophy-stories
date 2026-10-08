@@ -8,7 +8,7 @@ export function Header() {
   const path = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-bg/95 backdrop-blur">
+    <header className="sticky top-0 z-50 max-w-full border-b border-line bg-bg/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3">
         <Link href="/" className="flex min-w-0 shrink-0 items-center gap-2" aria-label="철학이야기 홈">
           <span
@@ -42,7 +42,7 @@ export function Header() {
       </nav>
       <nav
         aria-label="나두 역사·신화"
-        className="mx-auto flex max-w-6xl items-center gap-x-3 overflow-x-auto px-4 pb-2.5 text-xs"
+        className="mx-auto flex w-full min-w-0 max-w-6xl items-center gap-x-3 overflow-x-auto px-4 pb-2.5 text-xs"
       >
         <span
           aria-hidden="true"
@@ -55,10 +55,12 @@ export function Header() {
             <li key={sister.href} className="shrink-0">
               <a
                 href={sister.href}
-                className="text-muted underline decoration-line underline-offset-4 hover:text-terra"
+                target="_blank"
                 rel="noopener noreferrer"
+                className="inline-flex items-baseline gap-1 whitespace-nowrap text-muted underline decoration-line underline-offset-4 hover:text-terra"
               >
                 {sister.label}
+                <span className="text-[10px] tracking-[0.08em] text-terra">{sister.en}</span>
               </a>
             </li>
           ))}

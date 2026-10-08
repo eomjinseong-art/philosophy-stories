@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ExternalLinks } from "@/components/ExternalLinks";
 import { JsonLd } from "@/components/JsonLd";
 import { getPerson, neighbors, people } from "@/data/people";
 import { articleLd, pageMeta } from "@/lib/seo";
-import { eraLabel, traditionLabel } from "@/lib/site";
+import { eraLabel, iliadStoriesHref, traditionLabel } from "@/lib/site";
 
 export function generateStaticParams() {
   return people.map((person) => ({ slug: person.slug }));
@@ -28,6 +29,8 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
   const person = getPerson(slug);
   if (!person) notFound();
   const near = neighbors(slug);
+  const elsewhere = person.elsewhere ?? [];
+  const prominent = elsewhere.filter((link) => link.href === iliadStoriesHref);
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-10">
@@ -59,7 +62,7 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
       <p className="mt-6 text-xs tracking-[0.2em] text-terra">{person.nameEn}</p>
       <p className="mt-2 flex flex-wrap gap-2 text-[11px] text-muted">
         <span className="rounded-full bg-stone px-2 py-0.5">{traditionLabel[person.tradition]}</span>
-        <span className="rounded-full bg-stone px-2 py-0.5">{eraLabel[person.era]}</span>
+        <span className="max-w-full rounded-full bg-stone px-2 py-0.5">{eraLabel[person.era]}</span>
         <span className="rounded-full bg-stone px-2 py-0.5">{person.school}</span>
       </p>
       <h1 className="mt-3 font-serif text-4xl text-ink">{person.nameKo}</h1>
@@ -70,6 +73,21 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
       <p className="mt-4 text-base leading-8 text-ink">{person.oneLiner}</p>
       {person.caution ? (
         <p className="mt-4 rounded-lg border border-line bg-stone/70 p-4 text-sm leading-7 text-muted">{person.caution}</p>
+      ) : null}
+      {prominent.length > 0 ? (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {prominent.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex max-w-full whitespace-normal rounded-full bg-terra px-4 py-2 text-center text-sm text-white hover:bg-terra-deep"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
       ) : null}
 
       <section className="mt-10" aria-labelledby="ideas-heading">
@@ -137,6 +155,29 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
                 <h3 className="mt-1 font-serif text-xl text-ink">「{film.titleKo}」</h3>
                 <p className="mt-1 text-xs text-muted">{film.titleEn}</p>
                 <p className="mt-3 text-sm leading-7 text-muted">{film.blurb}</p>
+                <ExternalLinks links={film.links ?? []} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
+      {elsewhere.length > 0 ? (
+        <section className="mt-10 rounded-lg border border-line bg-card p-5" aria-labelledby="elsewhere-heading">
+          <h2 id="elsewhere-heading" className="font-serif text-2xl text-ink">
+            다른 사이트에서 더 보기
+          </h2>
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {elsewhere.map((link) => (
+              <li key={`${link.href}-${link.label}`}>
+                <a
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block max-w-full rounded-full border border-line bg-bg px-3 py-2 text-sm hover:border-terra"
+                >
+                  {link.label}
+                </a>
               </li>
             ))}
           </ul>

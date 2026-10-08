@@ -1,10 +1,15 @@
 import { east } from "@/data/east";
 import { eastMore } from "@/data/east-more";
-import type { Era, Person, PersonCard, Tradition } from "@/data/types";
+import type { Era, ExternalLink, Person, PersonCard, Tradition } from "@/data/types";
 import { west } from "@/data/west";
 import { westMore } from "@/data/west-more";
+import { linkCheckAllow404Hosts, sisters } from "@/lib/site";
+
+const sisterHosts = new Set(sisters.map((sister) => new URL(sister.href).host));
+const linkCheckAllow404 = new Set<string>(linkCheckAllow404Hosts);
 
 const westOrder = [
+  "homer",
   "heraclitus",
   "parmenides",
   "democritus",
@@ -110,8 +115,8 @@ export const people: Person[] = [
 ];
 
 function assertPeople(list: Person[]) {
-  if (list.length < 60 || list.length > 80) {
-    throw new Error(`roster size ${list.length} is outside 60–80`);
+  if (list.length < 60 || list.length > 90) {
+    throw new Error(`roster size ${list.length} is outside 60–90`);
   }
   const slugs = new Set<string>();
   const westCount = list.filter((person) => person.tradition === "west").length;
@@ -136,7 +141,9 @@ function assertPeople(list: Person[]) {
         throw new Error(`${person.slug} incomplete film`);
       }
       if (film.blurb.includes("http")) throw new Error(`${person.slug} film has a link`);
+      for (const link of film.links ?? []) assertExternal(person.slug, link, "film link");
     }
+    for (const link of person.elsewhere ?? []) assertExternal(person.slug, link, "elsewhere");
   }
   for (const person of list) {
     for (const slug of person.related) {
@@ -148,6 +155,19 @@ function assertPeople(list: Person[]) {
   for (const word of banned) {
     if (blob.includes(word)) throw new Error(`banned name in content: ${word}`);
   }
+}
+
+function assertExternal(slug: string, link: ExternalLink, kind: string) {
+  let url: URL;
+  try {
+    url = new URL(link.href);
+  } catch {
+    throw new Error(`${slug} ${kind} bad url`);
+  }
+  if (url.protocol !== "https:") throw new Error(`${slug} ${kind} not https`);
+  if (!link.label.trim()) throw new Error(`${slug} ${kind} empty label`);
+  if (sisterHosts.has(url.host) || linkCheckAllow404.has(url.host)) return;
+  throw new Error(`${slug} ${kind} host not allowed: ${url.host}`);
 }
 
 assertPeople(people);
@@ -193,6 +213,7 @@ export function countBy(tradition: Tradition | "all", era: Era | "all" = "all") 
 }
 
 export const readingOrder: { slug: string; why: string }[] = [
+  { slug: "homer", why: "철학 전에 그리스가 배운 뛰어남과 귀향" },
   { slug: "heraclitus", why: "같은 강에 두 번 들어가지 않는다는 말의 출처" },
   { slug: "socrates", why: "아는 척을 한번 의심해 보기" },
   { slug: "confucius", why: "사람 사이의 예와 인" },

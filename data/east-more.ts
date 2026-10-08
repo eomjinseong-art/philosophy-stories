@@ -342,6 +342,7 @@ export const eastMore: Person[] = [
     quotes: [
       { ko: "법의 성품은 둥글게 통하여 둘의 모습이 없고, 하나 가운데 전부가, 전부 가운데 하나가 있다는 취지를 도장처럼 그린 시가 법성게입니다.", source: "의상 『화엄일승법계도』 법성게", mode: "풀이", note: "게송 전체를 한 줄 명언으로 줄이지 않았습니다. 순서는 도인을 따라 읽습니다." },
     ],
+    elsewhere: [{ href: "https://korea-stories.vercel.app/rulers/munmu", label: "대한민국이야기의 문무왕" }],
     related: ["wonhyo", "fazang", "buddha"],
   },
   {
@@ -578,6 +579,10 @@ export const eastMore: Person[] = [
     ],
     quotes: [
       { ko: "목민관은 백성을 위해 있는 자리이니, 세금과 옥사와 구휼에서 그 자리를 남용하지 말자는 실무의 목록이 『목민심서』의 뼈대입니다.", source: "정약용 『목민심서』 서문과 12강의 취지", mode: "풀이" },
+    ],
+    elsewhere: [
+      { href: "https://korea-stories.vercel.app/regions/gyeonggi/suwon", label: "대한민국이야기 수원" },
+      { href: "https://korea-stories.vercel.app/rulers/jeongjo", label: "대한민국이야기의 정조" },
     ],
     related: ["yulgok", "toegye", "confucius"],
   },

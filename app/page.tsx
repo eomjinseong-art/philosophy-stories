@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
+import { SisterRows } from "@/components/SisterRows";
 import { getPerson, people, readingOrder } from "@/data/people";
 import { eraLabel, sisters, site, traditionLabel } from "@/lib/site";
 
@@ -56,9 +57,9 @@ export default function HomePage() {
           <Link href="/people?side=west" className="rounded-lg border border-line bg-card p-5 hover:border-terra">
             <p className="text-[11px] tracking-[0.16em] text-terra">WEST</p>
             <h3 className="mt-1 font-serif text-2xl text-ink">서양</h3>
-            <p className="mt-1 text-xs text-muted">{westCount}명 · 소크라테스 이전에서 20세기까지</p>
+            <p className="mt-1 text-xs text-muted">{westCount}명 · 철학 이전에서 20세기까지</p>
             <p className="mt-3 text-sm leading-6 text-muted">
-              헤라클레이토스와 파르메니데스에서 아리스토텔레스로, 스피노자와 칸트를 지나 헤겔, 밀, 마르크스, 비트겐슈타인, 롤스까지. 이븐 루시드는 그리스 철학이 아랍어를 거쳐 라틴으로 이어지는 다리로 서양 필터에 두었습니다. 저작권이 남은 20세기 글은 문장을 인용하지 않고 뜻만 적습니다.
+              호메로스에서 헤라클레이토스와 파르메니데스로, 아리스토텔레스로, 스피노자와 칸트를 지나 헤겔, 밀, 마르크스, 비트겐슈타인, 롤스까지. 이븐 루시드는 그리스 철학이 아랍어를 거쳐 라틴으로 이어지는 다리로 서양 필터에 두었습니다. 저작권이 남은 20세기 글은 문장을 인용하지 않고 뜻만 적습니다.
             </p>
           </Link>
           <Link href="/people?side=east" className="rounded-lg border border-line bg-card p-5 hover:border-terra">
@@ -118,18 +119,24 @@ export default function HomePage() {
             나두 역사·신화
           </h2>
           <p className="mt-2 text-sm leading-7 text-muted">
-            신의 이야기와 폴리스, 로마의 전쟁은 철학 옆의 역사입니다. 개념은 철학이야기에 두고, 시대의 장면은 나두의 다른 사이트에서 읽습니다.
+            신화와 서사시, 폴리스와 로마, 그 옆의 역사는 철학과 맞닿아 있습니다. 개념은 철학이야기에 두고, 시대의 장면은 나두의 다른 사이트에서 읽습니다.
           </p>
           <ul className="mt-4 space-y-2 text-sm">
             {sisters.map((sister) => (
               <li key={sister.href}>
-                <a href={sister.href} className="text-laurel underline decoration-line underline-offset-4 hover:text-terra" rel="noopener noreferrer">
+                <a
+                  href={sister.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-laurel underline decoration-line underline-offset-4 hover:text-terra"
+                >
                   {sister.label}
                 </a>
                 <span className="ml-2 text-[11px] tracking-[0.12em] text-terra">{sister.en}</span>
               </li>
             ))}
           </ul>
+          <SisterRows idPrefix="home" />
           <Link href="/sources" className="mt-4 inline-block text-sm text-terra">
             인용을 가리는 기준 →
           </Link>
