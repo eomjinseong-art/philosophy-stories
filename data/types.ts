@@ -1,6 +1,11 @@
 export type Tradition = "west" | "east";
-export type Era = "ancient" | "medieval" | "modern" | "contemporary";
+export type Era = "before" | "ancient" | "medieval" | "modern" | "contemporary";
 export type QuoteMode = "번역" | "풀이";
+
+export type ExternalLink = {
+  href: string;
+  label: string;
+};
 
 export type Idea = {
   title: string;
@@ -26,6 +31,7 @@ export type Film = {
   year: number;
   kind: "영화" | "다큐멘터리";
   blurb: string;
+  links?: ExternalLink[];
 };
 
 export type Person = {
@@ -45,6 +51,7 @@ export type Person = {
   quotes: Quote[];
   films?: Film[];
   related: string[];
+  elsewhere?: ExternalLink[];
 };
 
 export type PersonCard = Pick<

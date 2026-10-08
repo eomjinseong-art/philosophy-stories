@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ExternalLinks } from "@/components/ExternalLinks";
 import { JsonLd } from "@/components/JsonLd";
 import { people } from "@/data/people";
 import { articleLd, pageMeta } from "@/lib/seo";
@@ -41,6 +42,7 @@ export default function FilmsPage() {
                   <h3 className="mt-1 font-serif text-xl text-ink">「{film.titleKo}」</h3>
                   <p className="mt-1 text-xs text-muted">{film.titleEn}</p>
                   <p className="mt-3 text-sm leading-7 text-muted">{film.blurb}</p>
+                  <ExternalLinks links={film.links ?? []} />
                 </li>
               ))}
             </ul>

@@ -12,7 +12,15 @@ function sideFrom(value: string | null): (typeof traditions)[number]["id"] {
 }
 
 function eraFrom(value: string | null): (typeof eras)[number]["id"] {
-  if (value === "ancient" || value === "medieval" || value === "modern" || value === "contemporary") return value;
+  if (
+    value === "before" ||
+    value === "ancient" ||
+    value === "medieval" ||
+    value === "modern" ||
+    value === "contemporary"
+  ) {
+    return value;
+  }
   return "all";
 }
 
@@ -111,7 +119,7 @@ export function PeopleBrowser({ people }: { people: PersonCard[] }) {
                 <p className="text-[11px] tracking-[0.14em] text-terra">{person.nameEn}</p>
                 <p className="mt-2 flex flex-wrap gap-2 text-[11px] text-muted">
                   <span className="rounded-full bg-stone px-2 py-0.5">{traditionLabel[person.tradition]}</span>
-                  <span className="rounded-full bg-stone px-2 py-0.5">{eraLabel[person.era]}</span>
+                  <span className="max-w-full rounded-full bg-stone px-2 py-0.5">{eraLabel[person.era]}</span>
                   <span className="rounded-full bg-stone px-2 py-0.5">{person.school}</span>
                 </p>
                 <h2 className="mt-3 font-serif text-2xl text-ink">{person.nameKo}</h2>

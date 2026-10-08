@@ -13,11 +13,42 @@ export const site = {
     "생각만 하다 보면 저녁이 됩니다. 로켓배송은 동굴 밖으로 나가지 않아도 옵니다 · 쿠팡 둘러보기",
 } as const;
 
+/** 일리아스이야기 is deploying in parallel and may 404 until that site is live. */
+export const iliadStoriesHref = "https://iliad-stories.vercel.app" as const;
+
+export const linkCheckAllow404Hosts = ["iliad-stories.vercel.app"] as const;
+
 export const sisters = [
   { href: "https://nadoo-myth.vercel.app", label: "나두신화", en: "Myth" },
-  { href: "https://greece-stories.vercel.app", label: "그리스이야기", en: "Greece Stories" },
-  { href: "https://rome-stories.vercel.app", label: "로마이야기", en: "Rome Stories" },
+  { href: iliadStoriesHref, label: "일리아스이야기", en: "The Iliad" },
+  { href: "https://greece-stories.vercel.app", label: "그리스이야기", en: "Greece" },
+  { href: "https://rome-stories.vercel.app", label: "로마이야기", en: "Rome" },
+  { href: "https://egypt-stories.vercel.app", label: "이집트이야기", en: "Egypt" },
+  { href: "https://persia-stories.vercel.app", label: "페르시아이야기", en: "Persia" },
+  { href: "https://the-chosen-korean.vercel.app", label: "더 초즌 · 성경", en: "The Chosen · Bible" },
+  { href: "https://korea-stories.vercel.app", label: "대한민국이야기", en: "Korea" },
   { href: "https://nadoo-timeline.vercel.app", label: "나두연표", en: "Timeline" },
+  { href: "https://tinalinkeom.vercel.app", label: "나두 허브", en: "Nadoo Hub" },
+] as const;
+
+export const familyTrees = [
+  { href: "https://nadoo-myth.vercel.app/family-tree", label: "나두신화", en: "Myth" },
+  { href: "https://greece-stories.vercel.app/family-tree", label: "그리스이야기", en: "Greece" },
+  { href: "https://rome-stories.vercel.app/family-tree", label: "로마이야기", en: "Rome" },
+  { href: "https://egypt-stories.vercel.app/family-tree", label: "이집트이야기", en: "Egypt" },
+  { href: "https://persia-stories.vercel.app/family-tree", label: "페르시아이야기", en: "Persia" },
+  { href: "https://the-chosen-korean.vercel.app/family-tree", label: "더 초즌 · 성경", en: "The Chosen" },
+  { href: "https://korea-stories.vercel.app/family-tree", label: "대한민국이야기", en: "Korea" },
+] as const;
+
+export const sisterFilms = [
+  { href: "https://nadoo-myth.vercel.app/in-media", label: "나두신화", en: "Myth" },
+  { href: "https://greece-stories.vercel.app/movies", label: "그리스이야기", en: "Greece" },
+  { href: "https://rome-stories.vercel.app/movies", label: "로마이야기", en: "Rome" },
+  { href: "https://egypt-stories.vercel.app/movies", label: "이집트이야기", en: "Egypt" },
+  { href: "https://persia-stories.vercel.app/movies", label: "페르시아이야기", en: "Persia" },
+  { href: "https://the-chosen-korean.vercel.app/together", label: "더 초즌 · 성경", en: "The Chosen" },
+  { href: "https://korea-stories.vercel.app/films", label: "대한민국이야기", en: "Korea" },
 ] as const;
 
 export const nav = [
@@ -32,6 +63,7 @@ export const traditionLabel = {
 } as const;
 
 export const eraLabel = {
+  before: "철학 이전 · 그리스 정신의 뿌리 (Before Philosophy)",
   ancient: "고대",
   medieval: "중세",
   modern: "근세·근대",
@@ -46,6 +78,7 @@ export const traditions = [
 
 export const eras = [
   { id: "all", label: "모든 시대" },
+  { id: "before", label: "철학 이전" },
   { id: "ancient", label: "고대" },
   { id: "medieval", label: "중세" },
   { id: "modern", label: "근세·근대" },

@@ -567,6 +567,10 @@ export const east: Person[] = [
         note: "그의 문장처럼 도는 짧은 격언은 출처가 불분명한 것이 많아 싣지 않았습니다.",
       },
     ],
+    elsewhere: [
+      { href: "https://korea-stories.vercel.app/rulers/munmu", label: "대한민국이야기의 문무왕" },
+      { href: "https://korea-stories.vercel.app/regions/gyeongsang/gyeongju", label: "대한민국이야기 경주" },
+    ],
     related: ["buddha", "jinul", "nagarjuna"],
   },
   {
@@ -724,6 +728,7 @@ export const east: Person[] = [
         mode: "풀이",
       },
     ],
+    elsewhere: [{ href: "https://korea-stories.vercel.app/eras#joseon", label: "대한민국이야기의 조선" }],
     related: ["yulgok", "mencius", "wang-yangming"],
   },
   {
@@ -772,6 +777,7 @@ export const east: Person[] = [
         mode: "풀이",
       },
     ],
+    elsewhere: [{ href: "https://korea-stories.vercel.app/regions/gangwon/gangneung", label: "대한민국이야기 강릉" }],
     related: ["toegye", "mencius", "wang-yangming"],
   },
 ];
