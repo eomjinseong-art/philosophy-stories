@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { VisitorCounter } from "@/components/VisitorCounter";
 import { nav, sisters, site } from "@/lib/site";
 
 export function Header() {
@@ -22,6 +23,9 @@ export function Header() {
             <span className="mt-0.5 block text-[10px] leading-none tracking-[0.18em] text-terra">{site.nameEn}</span>
           </span>
         </Link>
+        <div className="ml-auto flex items-center gap-3">
+          <VisitorCounter />
+        </div>
       </div>
       <nav aria-label="주요 메뉴" className="mx-auto flex max-w-6xl gap-1 overflow-x-auto px-3 pb-2">
         {nav.map((item) => {
