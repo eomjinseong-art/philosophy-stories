@@ -446,6 +446,7 @@ export const west: Person[] = [
     ],
     elsewhere: [
       { href: "https://rome-stories.vercel.app/rulers/marcus-aurelius", label: "로마이야기의 마르쿠스 아우렐리우스" },
+      { href: "https://rome-stories.vercel.app/meditations/teachers", label: "로마이야기: 명상록 속 에픽테토스" },
     ],
     related: ["seneca", "marcus-aurelius", "socrates"],
   },
@@ -579,6 +580,7 @@ export const west: Person[] = [
     elsewhere: [
       { href: "https://rome-stories.vercel.app/rulers/marcus-aurelius", label: "로마이야기의 마르쿠스 아우렐리우스" },
       { href: "https://rome-stories.vercel.app/movies#gladiator", label: "로마이야기 영화 「글래디에이터」" },
+      { href: "https://rome-stories.vercel.app/meditations", label: "로마이야기의 『명상록』 12권 가이드" },
     ],
     related: ["epictetus", "seneca", "augustine"],
   },
