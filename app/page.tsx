@@ -3,6 +3,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { SisterRows } from "@/components/SisterRows";
 import { getPerson, people, readingOrder } from "@/data/people";
 import { eraLabel, sisters, site, traditionLabel } from "@/lib/site";
+import { CoupangCard } from "@/components/CoupangCard";
 
 const featured = ["socrates", "confucius", "buddha", "plato", "laozi", "kant"];
 
@@ -49,6 +50,7 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+      <CoupangCard />
       <div className="dentil opacity-50" aria-hidden="true" />
       <section className="mt-10" aria-labelledby="sides-heading">
         <h2 id="sides-heading" className="font-serif text-2xl text-ink">두 갈래, 한 목록</h2>
