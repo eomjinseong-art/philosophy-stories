@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { getPerson, neighbors, people } from "@/data/people";
 import { articleLd, pageMeta } from "@/lib/seo";
 import { eraLabel, iliadStoriesHref, traditionLabel } from "@/lib/site";
+import { CoupangCard } from "@/components/CoupangCard";
 
 export function generateStaticParams() {
   return people.map((person) => ({ slug: person.slug }));
@@ -218,6 +219,7 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
           </Link>
         ) : null}
       </nav>
+      <CoupangCard />
     </article>
   );
 }
