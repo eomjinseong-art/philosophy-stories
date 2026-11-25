@@ -25,7 +25,7 @@ const serif = Noto_Serif_KR({
 const title = `${site.name} · 쉬운 철학`;
 
 export const metadata: Metadata = {
-  verification: { google: "LglMaYLzS6dacAPQ5ZgZdPgzdtfLbp_1Rk5vh3WNPlM" },
+  verification: { google: "LglMaYLzS6dacAPQ5ZgZdPgzdtfLbp_1Rk5vh3WNPlM", other: { "naver-site-verification": "d2560aba6b16d6dde987ea412e3f45d80444d9f5" } },
   metadataBase: new URL(site.url),
   title: {
     default: title,
