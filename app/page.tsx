@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { SisterRows } from "@/components/SisterRows";
@@ -74,6 +75,7 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+      <NadooAd inline />
       <section className="mt-12" aria-labelledby="featured-heading">
         <h2 id="featured-heading" className="font-serif text-2xl text-ink">먼저 만날 여섯 사람</h2>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

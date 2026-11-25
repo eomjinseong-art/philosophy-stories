@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ExternalLinks } from "@/components/ExternalLinks";
@@ -25,6 +26,7 @@ export default function FilmsPage() {
       <p className="mt-4 text-sm leading-7 text-muted">
         있는 작품만 적습니다. 전기가 아닌 것은 전기가 아니라고 적습니다. 볼 수 있는 주소는 안내하지 않습니다.
       </p>
+      <NadooAd inline />
       <div className="mt-10 space-y-12">
         {withFilms.map((person) => (
           <section key={person.slug} aria-labelledby={`films-${person.slug}`}>

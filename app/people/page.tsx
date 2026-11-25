@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import { PeopleBrowser } from "@/components/PeopleBrowser";
@@ -22,6 +23,7 @@ export default function PeoplePage() {
       <p className="mt-4 max-w-3xl text-sm leading-7 text-muted">
         철학사 전체를 표로 외우지 않습니다. 이번 목록은 길을 잡는 {people.length}명입니다. 서양과 동양을 같은 카드로 두고, 시대 태그로만 나눕니다.
       </p>
+      <NadooAd inline />
       <Suspense fallback={<p className="mt-8 text-sm text-muted">목록을 준비하고 있습니다.</p>}>
         <PeopleBrowser people={personCards()} />
       </Suspense>
