@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -122,6 +123,7 @@ export default async function PersonPage({ params }: { params: Promise<{ slug: s
         </ul>
       </section>
 
+      <NadooAd inline />
       <section className="mt-10" aria-labelledby="quotes-heading">
         <h2 id="quotes-heading" className="font-serif text-2xl text-ink">
           말과 출처
